@@ -20,7 +20,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "@/libs/store";
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
-const pages = ["register", "login", "Blog"];
+const pages = ["register", "login"];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
