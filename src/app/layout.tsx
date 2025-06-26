@@ -28,7 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={roboto.variable}>
-      
+      <head>
+       <meta name="description" content="Share and discover posts with  ahmed yasser — the best place to connect and post your thoughts." />
+
+      </head>
       <body>
         <div><Toaster/></div>
         <Provider store={store}>
