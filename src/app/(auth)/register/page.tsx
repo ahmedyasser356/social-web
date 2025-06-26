@@ -10,7 +10,13 @@ import { RegisterData } from "@/interfaces/register";
 import { useRouter } from 'next/navigation';
 
 export default function register() {
+ 
+  let x = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+ 
+  let [isMobile,setIsMobile]=useState(x)
+  
 
+  
 
 let initialValues:RegisterData ={
   name:'',
@@ -98,7 +104,7 @@ if(error.status == 409){
               <Alert sx={{mb:1}} severity="error">{formik.errors.rePassword}</Alert>
             </Grid>}
              <Grid size={12}>
-              <TextField onChange={formik.handleChange}  value={formik.values.dateOfBirth} type="date" fullWidth variant="filled" label="Date of Birth" id="dateOfBirth" />
+              <TextField onChange={formik.handleChange}  value={formik.values.dateOfBirth} type="date" fullWidth variant="filled" label= {isMobile&&"Date of Birth"}  id="dateOfBirth" />
             </Grid>
             {formik.errors.dateOfBirth&&formik.touched.dateOfBirth&& <Grid size={12}>
               <Alert sx={{mb:1}} severity="error">{formik.errors.dateOfBirth}</Alert>
