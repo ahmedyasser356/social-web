@@ -11,7 +11,9 @@ import { Container, createTheme } from "@mui/material";
 import { store } from "@/libs/store";
 import   { Toaster } from 'react-hot-toast';
 import '@fortawesome/fontawesome-free/css/all.min.css'
- 
+import LoadingScreen from "./_components/LoadingScreen";
+ import Cookies from "js-cookie";
+import { usePathname } from "next/navigation";
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
@@ -25,7 +27,13 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>)
+
+
+{
+
+  let path =usePathname()
+ 
   return (
     <html lang="en" className={roboto.variable}>
       <head>
@@ -39,7 +47,7 @@ export default function RootLayout({
             
              
             <ThemeProvider theme={theme}>
-               
+               {Cookies.get('token') || path == '/login' || path == '/register' ?'':<LoadingScreen></LoadingScreen>}
               <Navbar></Navbar>
 
               <Container

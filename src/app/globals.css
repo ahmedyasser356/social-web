@@ -93,3 +93,23 @@ cursor: pointer;
 .update-post-box:hover .update-post-info{
 display:block;
 }
+.loading-screen{
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: #3778f1;
+z-index: 99999999999999999;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.loading-logo{
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ background-color: white;
+ padding: 17px;
+ border-radius: 40px;
+}

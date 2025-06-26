@@ -36,7 +36,7 @@ export default function page() {
   let rSideEle = ['Settings','Friends','Saves','Follow Page','Meta Ai','Archive']
   
   return <>
-  
+ 
 <Grid className='home-page'      container justifyContent='center' spacing={1}>
   <Grid className='left-side'  sx={{left:'10px',position:'fixed', display:{xs:'none',md:'block'}}} size={{md:2,xs:0}}>
      <p className="side-setting" style={{borderRadius:'8px',padding:'8px'}}>welcom to the social app</p>
