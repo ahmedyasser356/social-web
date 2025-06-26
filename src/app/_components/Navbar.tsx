@@ -22,7 +22,7 @@ import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
 const pages = ["register", "login", "Blog"];
 
-function ResponsiveAppBar() {
+function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -227,4 +227,4 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
-export default ResponsiveAppBar;
+export default Navbar;

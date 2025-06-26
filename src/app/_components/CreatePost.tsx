@@ -32,7 +32,10 @@ let {userInfo}=useSelector((state:RootState)=>state.user)
     // handle form data format
     const formdata = new FormData();
     formdata.append("body", body);
-    formdata.append("image", image);
+   if (image) {
+  formdata.append("image", image);
+   }
+
 
     let { data } = await axios.post(
       `https://linked-posts.routemisr.com/posts`,
