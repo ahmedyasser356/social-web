@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useFormik } from 'formik';
 import { RegisterData } from "@/interfaces/register";
  import * as Yup from 'yup';
-import { Email } from "@mui/icons-material";
+ 
  import axios from 'axios';
 
 import { useRouter } from 'next/navigation';
@@ -98,7 +98,7 @@ if(error.status == 409){
               <Alert sx={{mb:1}} severity="error">{formik.errors.rePassword}</Alert>
             </Grid>}
              <Grid size={12}>
-              <TextField onChange={formik.handleChange}  value={formik.values.dateOfBirth} type="date" fullWidth variant="filled"  id="dateOfBirth" />
+              <TextField onChange={formik.handleChange}  value={formik.values.dateOfBirth} type="date" fullWidth variant="filled" label="Date of Birth" id="dateOfBirth" />
             </Grid>
             {formik.errors.dateOfBirth&&formik.touched.dateOfBirth&& <Grid size={12}>
               <Alert sx={{mb:1}} severity="error">{formik.errors.dateOfBirth}</Alert>
