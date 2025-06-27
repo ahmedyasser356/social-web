@@ -181,35 +181,44 @@ function Navbar() {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                <MenuItem key="Change photo" onClick={handleCloseUserMenu}>
+               
                   <Link href="/changephoto">
                     {" "}
+                     <MenuItem key="Change photo" onClick={handleCloseUserMenu}>
                     <Typography sx={{ color: "black", textAlign: "center" }}>
                       Change photo
                     </Typography>
+                      </MenuItem>
                   </Link>
-                </MenuItem>
+              
 
-                <MenuItem key={"profile"} onClick={handleCloseUserMenu}>
+              
                   <Link href="/profile">
                     {" "}
+                      <MenuItem key={"profile"} onClick={handleCloseUserMenu}>
                     <Typography sx={{ color: "black", textAlign: "center" }}>
                       Profile
                     </Typography>
+                      </MenuItem>
                   </Link>
-                </MenuItem>
-                <MenuItem key={"change password"} onClick={handleCloseUserMenu}>
+              
+               
                   <Link href="/changepassword">
                     {" "}
+                     <MenuItem key={"change password"} onClick={handleCloseUserMenu}> 
                     <Typography sx={{ color: "black", textAlign: "center" }}>
                       Change Password
                     </Typography>
+                    </MenuItem>
                   </Link>
-                </MenuItem>
+                
 
-                <MenuItem key="logout" onClick={handleCloseUserMenu}>
+                <MenuItem key="logout" onClick={()=>{
+                  handleCloseUserMenu()
+                  handleLogout()
+                }}>
                   <p
-                    onClick={handleLogout}
+                     
                     style={{
                       color: "black",
                       textAlign: "center",
