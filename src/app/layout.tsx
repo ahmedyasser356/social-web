@@ -9,16 +9,10 @@ import { cookies } from "next/headers";
 import { usePathname } from "next/navigation";
 import Providers from "./_components/Providers";
 
-const roboto = Roboto({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-roboto",
-});
+
 
 export const metadata = {
   title: "social web",
-  description: "Your site description",
   icons: {
     icon: "/favicon.png",
   },
@@ -26,7 +20,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={roboto.variable}>
+    <html lang="en">
       <body>
         <Providers>
           <Navbar />
