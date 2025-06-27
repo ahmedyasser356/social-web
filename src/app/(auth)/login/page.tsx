@@ -5,7 +5,7 @@ import LoginForm from "@/app/_components/LoginForm";
  
 
 export const metadata = {
-  title: "Login Page - My Website",
+  title: "Login Page - social app",
  icons: {
     icon: "/favicon.png", // or /favicon.png, /my-icon.svg, etc.
     
