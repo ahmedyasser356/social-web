@@ -113,3 +113,33 @@ justify-content: center;
  padding: 17px;
  border-radius: 40px;
 }
+/* slider test ======================= */
+.slider-wrapper {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider-container {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  height: 150px;
+  width: 100%;
+}
+.slider-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.slider-item {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  background: #f8f8f8;
+}
+/* ===================================================== */
+ 
